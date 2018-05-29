@@ -1,0 +1,14 @@
+{
+  "name": "iosExampleBackend",
+  "description": "A Backend example for the iOS demo",
+  "repository": "https://github.com/floriel-fedry-cko/just-another-test",
+  "keywords": [],
+  "scripts": {},
+  "env": {},
+  "addons": [],
+  "buildpacks": [
+    {
+      "url": "https://github.com/vapor/heroku-buildpack"
+    }
+  ]
+}
