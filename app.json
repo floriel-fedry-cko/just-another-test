@@ -4,7 +4,12 @@
   "repository": "https://github.com/floriel-fedry-cko/just-another-test",
   "keywords": [],
   "scripts": {},
-  "env": {},
+  "env": {
+    "SECRET_KEY": {
+      "description": "Your sandbox secret key",
+      "required": true
+    }
+  },
   "addons": [],
   "buildpacks": [
     {
