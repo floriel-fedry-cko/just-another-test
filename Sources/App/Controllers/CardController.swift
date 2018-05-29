@@ -1,6 +1,6 @@
 import Vapor
 
-/// Controls basic CRUD operations on `Customer`s.
+/// Card Controller
 final class CardController {
     
     let endpoint = "charges/token"
@@ -30,6 +30,7 @@ final class CardController {
         // Create the zero dollar request
         var zeroDollarRequest = ChargeRequest(cardToken: card.cardToken, currency: "USD", value: 0)
         zeroDollarRequest.customerId = card.customerId
+        zeroDollarRequest.email = card.customerEmail
         zeroDollarRequest.transactionIndicator = "2"
         // Send request and get response
         let response = client.post("\(merchantConfig.baseUrl)\(endpoint)", headers: merchantConfig.headers) { request in

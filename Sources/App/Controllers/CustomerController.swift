@@ -1,6 +1,6 @@
 import Vapor
 
-/// Controls basic CRUD operations on `Customer`s.
+/// Customer Controller
 final class CustomerController {
     
     let endpoint = "customers/"

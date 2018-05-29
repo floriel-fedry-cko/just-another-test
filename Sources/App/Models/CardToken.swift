@@ -3,5 +3,6 @@ import Vapor
 
 struct CardToken: Content {
     var cardToken: String
-    var customerId: String
+    var customerId: String?
+    var customerEmail: String?
 }
