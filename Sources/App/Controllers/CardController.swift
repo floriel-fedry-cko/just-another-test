@@ -39,7 +39,27 @@ final class CardController {
                 return try res.content.decode(ZeroDollarResponse.self)
         }
         return response
-        
+    }
+    
+    func authorizeWith3ds(_ req: Request, authorizationRequest: AuthorizeWithCardIdRequest) throws -> Future<AuthorizeWithCardIdResponse> {
+        // Get Merchant Configuration
+        let merchantConfig = try req.make(MerchantConfig.self)
+        // Get HTTP Client instance
+        let client = try req.make(Client.self)
+        // Send request
+        let response = client.post("\(merchantConfig.baseUrl)charges/card", headers: merchantConfig.headers) { request in
+            let auth = AuthorizeWithCardIdRequest(cardId: authorizationRequest.cardId,
+                                                  cvv: authorizationRequest.cvv,
+                                                  currency: authorizationRequest.currency,
+                                                  email: authorizationRequest.email,
+                                                  value: authorizationRequest.value,
+                                                  chargeMode: 2)
+            try request.content.encode(auth)
+            }.flatMap(to: AuthorizeWithCardIdResponse.self) { res in
+                print(res)
+                return try res.content.decode(AuthorizeWithCardIdResponse.self)
+            }
+        return response
     }
 }
 

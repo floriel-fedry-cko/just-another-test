@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		E609F49820BEF34100893E61 /* AuthorizeWithCardIdRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E609F49720BEF34100893E61 /* AuthorizeWithCardIdRequest.swift */; };
+		E609F49A20BEF3B800893E61 /* AuthorizeWithCardIdResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E609F49920BEF3B800893E61 /* AuthorizeWithCardIdResponse.swift */; };
 		OBJ_1048 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* AppTests.swift */; };
 		OBJ_1050 /* App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "example-swift-backend::App::Product" /* App.framework */; };
 		OBJ_1051 /* Vapor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Vapor::Vapor::Product" /* Vapor.framework */; };
@@ -4857,6 +4859,8 @@
 		"Crypto::Random::Product" /* Random.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Random.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Crypto::libbcrypt::Product" /* libbcrypt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = libbcrypt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"DatabaseKit::DatabaseKit::Product" /* DatabaseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DatabaseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E609F49720BEF34100893E61 /* AuthorizeWithCardIdRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeWithCardIdRequest.swift; sourceTree = "<group>"; };
+		E609F49920BEF3B800893E61 /* AuthorizeWithCardIdResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeWithCardIdResponse.swift; sourceTree = "<group>"; };
 		"Fluent::Fluent::Product" /* Fluent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Fluent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Fluent::FluentSQL::Product" /* FluentSQL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FluentSQL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"FluentSQLite::FluentSQLite::Product" /* FluentSQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FluentSQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -6483,6 +6487,8 @@
 				OBJ_24 /* Phone.swift */,
 				OBJ_25 /* Product.swift */,
 				OBJ_26 /* Todo.swift */,
+				E609F49920BEF3B800893E61 /* AuthorizeWithCardIdResponse.swift */,
+				E609F49720BEF34100893E61 /* AuthorizeWithCardIdRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -7470,7 +7476,7 @@
 			path = Log;
 			sourceTree = "<group>";
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -7480,7 +7486,6 @@
 				OBJ_39 /* Dependencies */,
 				OBJ_844 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_505 /* Service */ = {
@@ -10171,7 +10176,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_844 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -11325,10 +11330,12 @@
 				OBJ_904 /* ChargeRequest.swift in Sources */,
 				OBJ_905 /* ChargeResponse.swift in Sources */,
 				OBJ_906 /* Customer.swift in Sources */,
+				E609F49A20BEF3B800893E61 /* AuthorizeWithCardIdResponse.swift in Sources */,
 				OBJ_907 /* CustomerList.swift in Sources */,
 				OBJ_908 /* Phone.swift in Sources */,
 				OBJ_909 /* Product.swift in Sources */,
 				OBJ_910 /* Todo.swift in Sources */,
+				E609F49820BEF34100893E61 /* AuthorizeWithCardIdRequest.swift in Sources */,
 				OBJ_911 /* MerchantConfig.swift in Sources */,
 				OBJ_912 /* app.swift in Sources */,
 				OBJ_913 /* boot.swift in Sources */,

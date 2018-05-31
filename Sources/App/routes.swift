@@ -21,4 +21,5 @@ public func routes(_ router: Router) throws {
     // Card controller
     let cardController = CardController()
     router.post(CardToken.self, at: "cards/verify", use: cardController.verify)
+    router.post(AuthorizeWithCardIdRequest.self, at: "cards/pay3d", use: cardController.authorizeWith3ds)
 }
