@@ -5,14 +5,14 @@ struct ChargeRequest: Content {
     /// A valid card token, with the prefix card_tok_.
     var cardToken: String
     /// Three-letter ISO currency code representing the currency of the payment.
-    var currency: String
+    var currency: String?
     /// The email address of the customer associated with the card ID.
     var email: String?
     /// The customer ID of the customer associated with the card ID.
     var customerId: String?
     /// The value of the payment as a non-zero positive integer (no decimals).
     /// Set to 0 for card verification (zero dollar authorization).
-    var value: Int
+    var value: Int?
     /// If enabled, it automatically captures the payment following the autoCapTime period.
     /// y = enable | n = disable
     var autoCapture: String?

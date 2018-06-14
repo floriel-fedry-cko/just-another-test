@@ -42,13 +42,21 @@ final class CardController {
     }
 
     func charge(_ req: Request, chargeRequest: ChargeRequest) throws -> Future<ChargeResponse> {
+        // Set values
+        var chargeReq = chargeRequest
+        if chargeRequest.value == nil {
+            chargeReq.value = 100
+        }
+        if chargeRequest.currency == nil {
+            chargeReq.currency = "GBP"
+        }
         // Get Merchant Configuration
         let merchantConfig = try req.make(MerchantConfig.self)
         // Get HTTP Client instance
         let client = try req.make(Client.self)
         // Send request and get response
         let response = client.post("\(merchantConfig.baseUrl)\(endpoint)", headers: merchantConfig.headers) { request in
-            try request.content.encode(chargeRequest)
+            try request.content.encode(chargeReq)
             }.flatMap(to: ChargeResponse.self) { res in
                 return try res.content.decode(ChargeResponse.self)
         }
