@@ -4861,6 +4861,7 @@
 		E609F49720BEF34100893E61 /* AuthorizeWithCardIdRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeWithCardIdRequest.swift; sourceTree = "<group>"; };
 		E609F49920BEF3B800893E61 /* AuthorizeWithCardIdResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeWithCardIdResponse.swift; sourceTree = "<group>"; };
 		E64B31E620D2BCC80088B7FD /* DeleteCardRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteCardRequest.swift; sourceTree = "<group>"; };
+		E64B31E820D2CFEE0088B7FD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		"Fluent::Fluent::Product" /* Fluent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Fluent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Fluent::FluentSQL::Product" /* FluentSQL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FluentSQL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"FluentSQLite::FluentSQLite::Product" /* FluentSQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FluentSQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -7477,6 +7478,7 @@
 		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
+				E64B31E820D2CFEE0088B7FD /* README.md */,
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_35 /* Tests */,
