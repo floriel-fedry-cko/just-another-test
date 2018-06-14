@@ -1,7 +1,7 @@
 import Foundation
 import Vapor
 
-struct ZeroDollarResponse: Content {
+struct ChargeResponse: Content {
     var id: String
     var liveMode: Bool
     var created: String

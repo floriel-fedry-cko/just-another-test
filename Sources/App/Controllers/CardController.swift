@@ -22,7 +22,7 @@ final class CardController {
         return customer
     }
     
-    func verify(_ req: Request, card: CardToken) throws -> Future<ZeroDollarResponse> {
+    func verify(_ req: Request, card: CardToken) throws -> Future<ChargeResponse> {
         // Get Merchant Configuration
         let merchantConfig = try req.make(MerchantConfig.self)
         // Get HTTP Client instance
@@ -35,8 +35,22 @@ final class CardController {
         // Send request and get response
         let response = client.post("\(merchantConfig.baseUrl)\(endpoint)", headers: merchantConfig.headers) { request in
             try request.content.encode(zeroDollarRequest)
-            }.flatMap(to: ZeroDollarResponse.self) { res in
-                return try res.content.decode(ZeroDollarResponse.self)
+            }.flatMap(to: ChargeResponse.self) { res in
+                return try res.content.decode(ChargeResponse.self)
+        }
+        return response
+    }
+
+    func charge(_ req: Request, chargeRequest: ChargeRequest) throws -> Future<ChargeResponse> {
+        // Get Merchant Configuration
+        let merchantConfig = try req.make(MerchantConfig.self)
+        // Get HTTP Client instance
+        let client = try req.make(Client.self)
+        // Send request and get response
+        let response = client.post("\(merchantConfig.baseUrl)\(endpoint)", headers: merchantConfig.headers) { request in
+            try request.content.encode(chargeRequest)
+            }.flatMap(to: ChargeResponse.self) { res in
+                return try res.content.decode(ChargeResponse.self)
         }
         return response
     }

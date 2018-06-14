@@ -23,6 +23,7 @@
 /* Begin PBXBuildFile section */
 		E609F49820BEF34100893E61 /* AuthorizeWithCardIdRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E609F49720BEF34100893E61 /* AuthorizeWithCardIdRequest.swift */; };
 		E609F49A20BEF3B800893E61 /* AuthorizeWithCardIdResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E609F49920BEF3B800893E61 /* AuthorizeWithCardIdResponse.swift */; };
+		E64B31E720D2BCC80088B7FD /* DeleteCardRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64B31E620D2BCC80088B7FD /* DeleteCardRequest.swift */; };
 		OBJ_1048 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* AppTests.swift */; };
 		OBJ_1050 /* App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "example-swift-backend::App::Product" /* App.framework */; };
 		OBJ_1051 /* Vapor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Vapor::Vapor::Product" /* Vapor.framework */; };
@@ -1119,7 +1120,6 @@
 		OBJ_2943 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_843 /* Package.swift */; };
 		OBJ_895 /* CardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* CardController.swift */; };
 		OBJ_896 /* CustomerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* CustomerController.swift */; };
-		OBJ_897 /* TodoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* TodoController.swift */; };
 		OBJ_898 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Address.swift */; };
 		OBJ_899 /* AuthorizeCardIdRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* AuthorizeCardIdRequest.swift */; };
 		OBJ_900 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* Card.swift */; };
@@ -1132,7 +1132,6 @@
 		OBJ_907 /* CustomerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* CustomerList.swift */; };
 		OBJ_908 /* Phone.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* Phone.swift */; };
 		OBJ_909 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* Product.swift */; };
-		OBJ_910 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* Todo.swift */; };
 		OBJ_911 /* MerchantConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* MerchantConfig.swift */; };
 		OBJ_912 /* app.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* app.swift */; };
 		OBJ_913 /* boot.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* boot.swift */; };
@@ -4861,6 +4860,7 @@
 		"DatabaseKit::DatabaseKit::Product" /* DatabaseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DatabaseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E609F49720BEF34100893E61 /* AuthorizeWithCardIdRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeWithCardIdRequest.swift; sourceTree = "<group>"; };
 		E609F49920BEF3B800893E61 /* AuthorizeWithCardIdResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeWithCardIdResponse.swift; sourceTree = "<group>"; };
+		E64B31E620D2BCC80088B7FD /* DeleteCardRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteCardRequest.swift; sourceTree = "<group>"; };
 		"Fluent::Fluent::Product" /* Fluent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Fluent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Fluent::FluentSQL::Product" /* FluentSQL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FluentSQL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"FluentSQLite::FluentSQLite::Product" /* FluentSQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FluentSQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -4883,7 +4883,6 @@
 		OBJ_114 /* Timestampable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timestampable.swift; sourceTree = "<group>"; };
 		OBJ_116 /* Pivot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pivot.swift; sourceTree = "<group>"; };
 		OBJ_119 /* QueryBuilder+CRUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QueryBuilder+CRUD.swift"; sourceTree = "<group>"; };
-		OBJ_12 /* TodoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoController.swift; sourceTree = "<group>"; };
 		OBJ_120 /* QueryBuilder+Execute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QueryBuilder+Execute.swift"; sourceTree = "<group>"; };
 		OBJ_121 /* QueryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryBuilder.swift; sourceTree = "<group>"; };
 		OBJ_123 /* QueryDataDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryDataDecoder.swift; sourceTree = "<group>"; };
@@ -5011,7 +5010,6 @@
 		OBJ_257 /* DateMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateMiddleware.swift; sourceTree = "<group>"; };
 		OBJ_258 /* ErrorMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMiddleware.swift; sourceTree = "<group>"; };
 		OBJ_259 /* FileMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileMiddleware.swift; sourceTree = "<group>"; };
-		OBJ_26 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		OBJ_260 /* Middleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Middleware.swift; sourceTree = "<group>"; };
 		OBJ_261 /* MiddlewareConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddlewareConfig.swift; sourceTree = "<group>"; };
 		OBJ_263 /* HTTPMethod+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPMethod+String.swift"; sourceTree = "<group>"; };
@@ -6486,9 +6484,9 @@
 				OBJ_23 /* CustomerList.swift */,
 				OBJ_24 /* Phone.swift */,
 				OBJ_25 /* Product.swift */,
-				OBJ_26 /* Todo.swift */,
 				E609F49920BEF3B800893E61 /* AuthorizeWithCardIdResponse.swift */,
 				E609F49720BEF34100893E61 /* AuthorizeWithCardIdRequest.swift */,
+				E64B31E620D2BCC80088B7FD /* DeleteCardRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -8581,7 +8579,6 @@
 			children = (
 				OBJ_10 /* CardController.swift */,
 				OBJ_11 /* CustomerController.swift */,
-				OBJ_12 /* TodoController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -11320,7 +11317,6 @@
 			files = (
 				OBJ_895 /* CardController.swift in Sources */,
 				OBJ_896 /* CustomerController.swift in Sources */,
-				OBJ_897 /* TodoController.swift in Sources */,
 				OBJ_898 /* Address.swift in Sources */,
 				OBJ_899 /* AuthorizeCardIdRequest.swift in Sources */,
 				OBJ_900 /* Card.swift in Sources */,
@@ -11333,8 +11329,8 @@
 				E609F49A20BEF3B800893E61 /* AuthorizeWithCardIdResponse.swift in Sources */,
 				OBJ_907 /* CustomerList.swift in Sources */,
 				OBJ_908 /* Phone.swift in Sources */,
+				E64B31E720D2BCC80088B7FD /* DeleteCardRequest.swift in Sources */,
 				OBJ_909 /* Product.swift in Sources */,
-				OBJ_910 /* Todo.swift in Sources */,
 				E609F49820BEF34100893E61 /* AuthorizeWithCardIdRequest.swift in Sources */,
 				OBJ_911 /* MerchantConfig.swift in Sources */,
 				OBJ_912 /* app.swift in Sources */,

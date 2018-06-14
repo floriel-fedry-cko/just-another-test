@@ -30,8 +30,7 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     services.register(merchantConfig)
 
     /// Configure migrations
-    var migrations = MigrationConfig()
-    migrations.add(model: Todo.self, database: .sqlite)
+    let migrations = MigrationConfig()
     services.register(migrations)
 
 }

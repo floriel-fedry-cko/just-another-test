@@ -6,12 +6,6 @@ public func routes(_ router: Router) throws {
     router.get("hello") { req in
         return "Hello, world!"
     }
-
-    // Example of configuring a controller
-    let todoController = TodoController()
-    router.get("todos", use: todoController.index)
-    router.post("todos", use: todoController.create)
-    router.delete("todos", Todo.parameter, use: todoController.delete)
     
     // Customer controller
     let customerController = CustomerController()
@@ -22,4 +16,6 @@ public func routes(_ router: Router) throws {
     let cardController = CardController()
     router.post(CardToken.self, at: "cards/verify", use: cardController.verify)
     router.post(AuthorizeWithCardIdRequest.self, at: "cards/pay3d", use: cardController.authorizeWith3ds)
+    router.post(ChargeRequest.self, at: "cards/charge", use: cardController.charge)
+    
 }

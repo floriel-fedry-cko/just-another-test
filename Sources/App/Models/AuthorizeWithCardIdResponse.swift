@@ -8,6 +8,6 @@ struct AuthorizeWithCardIdResponse: Content {
     let responseCode: String
     let redirectUrl: String
     let trackId: String?
-    let enrolled: String
+    let enrolled: String?
 }
 
